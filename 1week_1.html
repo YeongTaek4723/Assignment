@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>1week_1 Assignment</title>
+    </head>
+    <body>  
+        <p style = "font-size : x-large">1. 깃명령</p><hr>
+        <ul>
+            <li><b>add</b>
+                <p>git add는 작업 디렉토리(working directory) 상의 변경 내용을 스테이징 영역(staging area)에 추가하기 위해서 사용하는 Git명령어이다.</p>
+            <li><b>commit</b>
+                <p> git commit은 스테이징 영역(staging area)에 저장되었던 파일이 local repository로 커밋하는 Git명령어이다.</p>
+            <li><b>push</b>
+                <p>git push는 remote에 local repository에서 변경, 추가된 파일(코드)를 업로드하기 위해서 사용하는 Git명령어이다.</p>
+     
+        </ul><hr><br>
+        <p style = "font-size : x-large">2. CLI</p><hr>
+        <p>명령 줄 인터페이스(Command Line Interface) 또는 명령어 인터페이스는 텍스트 터미널을 통해 사용자와 컴퓨터가 상호 작용하는 방식을 뜻한다.<br>
+            즉, 작업 명령은 사용자가 컴퓨터 키보드를 통해 문자열의 형태로 입력하며, 컴퓨터로부터의 출력 역시 문자열의 형태로 주어진다
+        </p><hr><br>
+        <p style = "font-size : x-large">3. GUI</p><hr>
+        <p>
+            그래픽 사용자 인터페이스(Graphical User Interface)는 사용자가 편리하게 사용할 수 있도록 입출력 등의 기능을 알기 쉬운 아이콘 형태의 그래픽으로 나타낸 것이다.
+        </p><hr><br>
+        <p style = "font-size : x-large">4. 쓰레드(Thread)</p><hr>
+        <ul>
+            <li>쓰레드(Thread)는 프로세스(Process) 내에서 실제로 작업을 수행하는 주체를 의미한다.<br>
+                모든 프로세스에는 한 개 이상의 쓰레드가 존재하여 작업을 수행합니다.<br>
+                또한, 두 개 이상의 쓰레드를 가지는 프로세스를 멀티스레드 프로세스(Multi-Threaded Process)라고 합니다.<br><br> 
+            <li><b>쓰레드의 장점</b><br><br> 
+                <ul>
+                    <li><b>응답성</b>
+                        <p>하나의 쓰레드가 blocked 상태인 동안(I/O를 기다리거나)에서도 다른 스레드가 실행되어 빠른 응답성을 가질 수 있다.</p>
+                    <li><b>자원 공유</b>
+                        <p>code 영역, data영역, OS resources들을 공유하여 자원을 효율적으로 사용한다.</p>
+                    <li><b>경제적</b>
+                        <p>쓰레드를 생성하는 것이 프로세스를 생성하는 것보다 비용이 적다.</p>
+                    <li><b>병렬성</b>
+                        <p>멀티 코어 환경에서 서로 다른 쓰레드가 서로 다른 CPU에서 병렬적으로 처리되어 높은 처리율과 성능 향상을 기대할 수 있다.</p>
+                </ul>
+        </ul><hr><br>
+        <p style = "font-size : x-large">5. 문맥교환(Context Switch)</p><hr>
+        <ul>
+            <li>문맥교환(Context Switch)이란 CPU가 현재 작업 중인 프로세스에서 다른 프로세스로 넘어갈 때 지금까지의 프로세스의 상태를 저장하고, 새 프로세스의 저장<br>
+                된 상태를 다시 적재하는 작업을 문맥교환이라 한다.<br>
+                (프로세스의 정보는 PCB(Printed Circuit Board, 인쇄회로기판)에 저장된다.)<br><br>   
+            <li>문맥교환이 발생하는 이유는 멀티태스킹, 인터럽트 핸들링, 사용자 모드와 커널 모드 간의 전환으로 3가지가 있다.<br><br> 
+                <ul>
+                    <li><b>멀티태스킹(Multitasking)</b><br><br> 
+                        <ul>
+                            <li>실행 가능한 프로세스들이 운영체제의 스케줄러에 의해 조금씩 번갈아가면서 수행되는 것을 말한다.<br><br> 
+                            <li>번갈아 가며 프로세스가 CPU를 할당 받는데 이때 문맥교환을 한다.<br><br> 
+                            <li>사용자는 체감하기 힘든 속도로 문맥교환이 되며 프로세스가 처리되기 때문에 동시에 처리하는 것처럼 느낀다.
+                        </ul><br><br>
+                    <li><b>인터럽트 핸들링(Interrupt Handling)</b><br><br>
+                        <ul>
+                            <li>인터럽트란 컴퓨터 시스템에서 예외 상황이 발생하였을때 CPU에게 알려 처리할 수 있도록 하는 것을 말한다. (인터럽트가 발생하면 문맥교환을 한다)
+                        </ul><br><br>
+                    <li><b>사용자와 커널 모드 전환(User and kernel mode switching)</b><br><br>
+                        <ul>
+                            <li>사용자와 커널 모드 전환은 문맥교환이 필수는 아니지만 운영체제에 따라 발생할 수 있다.
+                        </ul>
+                </ul><br><br> 
+            <li>문맥교환을 하는 동안 CPU는 아무일도 하지않는 시간이 발생하는데 이를 오버헤드(OverHead)라 하고 오버헤드가 잦아지면 성능이 떨어질 수 있다.
+        </ul><hr><br>
+        <p style = "font-size : x-large">6. REST-API</p><hr>
+        <ul>
+            <li><b>REST의 정의</b><br><br>
+                <ul>
+                    <li>REST는 Representational State Transfer의 약자로 자원(resource)을 이름(자원의 표현)으로 구분하여 해당 자원의 상태(정보)를 주고 받는 모든 것을 의미한다.<br>
+                        즉, 자원의 표현에 의한 상태 전달<br><br>
+                    <li>웹의 기존 기술과 HTTP 프로토콜을 그대로 활용하기 때문에 웹의 장점을 최대한 활용할 수 있는 아키텍쳐 스타일<br><br>
+                    <li>네트워크 상에서 클라이언트와 서버 사이의 통신 방식 중 하나
+                </ul><br>
+            <li><b>API</b><br><br>
+                <ul>
+                    <li>데이터와 기능의 집합을 제공하여 컴퓨터 프로그램간 상호작용을 촉진하며, 서로 정보를 교환가능 하도록 하는 것
+                </ul><br><br>
+            <li><b>REST API의 정의</b><br><br>
+                <ul>
+                    <li>REST 기반으로 서비스 API를 구현한 것<br><br>
+                    <li>OpenAPI(누구나 사용할 수 있는 공개된 API)는 대부분 REST API를 제공한다.            
+                </ul>  
+        </ul><hr><br>
+        <p style = "font-size : x-large">7. HTMl - CSS - JS</p><hr>
+        <p>
+            <ul>
+                <li><b>HTML</b>
+                    <p>
+                        HTML은 Hyper Text Markup Language의 약자로 HyperText(웹 페이지에서 다른 페이지로 이동할 수 있도록 하는 것) 기능을 가진 문서를 만드는 언어입니다.<br>
+                        구조를 설계할 때 사용되는 언어로 Hyper Link 시스템을 가지고 있으며, 흔히 말하는 웹페이지를 위한 마크업 언어라고 할 수 있다.
+                    </p>
+                <li><b>CSS</b>
+                    <p>
+                        CSS는 Cascading Style Sheets(캐스케이딩 스타일 시트) 약자로, 문장에 디자인을 입히고 싶을 때 사용하는 언어이다.<br>
+                        HTML은 문장의 구조를 만드는 반면 CSS는 그 문장을 어떻게 브라우저에 표시할지 지정하는 언어로 HTML과 세트로 사용합니다.<br>
+                        그래서 CSS는 '구조'와 '디자인'의 역할 분리를 위한 언어라고 합니다.
+                    </p>
+                <li><b>JS(JavaScript)</b>
+                    <p>
+                        웹 브라우저에서 HTML 문서에 내장한 JS를 읽으면 즉시 해석되어, 소스코드가 실행된 결과를 눈으로 볼 수 있는 클라이언트 사이드(프론트 엔드)언어이다.<br>
+                        웹페이지에서 특정 부분을 클릭하거나 입력 했을 때, '팝업 창 띄우기', '애니메이션 효과', '통신'등의 다양한 기능을 추가할 수 있습니다.
+                    </p>
+            </ul>
+        </p><hr><br>
+        <p style = "font-size : x-large">8. nginx</p><hr>
+        <ul>
+            <li>Nginx는 경량 웹 서버이다. 클라이언트로부터 요청을 받았을 때 요청에 맞는 정적 파일을 응답해주는 HTTP Web Server로 활용되기도 하고, Reverse Proxy Server로 활용하여<br>
+                WAS 서버의 부하를 줄일 수 있는 로드 밸런서로 활용되기도 한다.<br><br>
+            <li>새로운 요청이 들어오더라도 새로운 프로세스와 쓰레드를 생성하지 않기 때문에 프로세스와 쓰레드 생성 비용이 존재하지 않고, 적은 자원으로도 효율적인 운용이 가능하다.<br>
+                이러한 Nginx의 장점 덕분에 단일 서버에서도 동시에 많은 연결을 처리할 수 있다.<br><br>
+            <li>Event-Driven 구조로 동작하기 떄문에 한 개 또는 고정된 프로세스만 생성하여 사용하며, 비동기 방식으로 요청들을 Concurrency 하게 처리할 수 있다.
+                <ul>
+                    <li>Event-Driven
+                        <ul>
+                            <li>apache의 C10K 문제점 해결(한 시스템에 동시 접속자수가 1만명이 넘어갈 때 효율적방안)을 위해 만들어진 웹서버SW
+                        </ul>
+                </ul>
+            
+        </ul><hr><br>
+        <p style = "font-size : x-large">9. IP</p><hr>
+        <ul>
+            <li>IP는 Internet Protocol의 약자로 인터넷에 연결되어 있는 모든 장치들(컴퓨터, 서버장비, 스마트폰 등)을 식별할 수 있도록 각각의 장비에게 부여되는 고유 주소이다.<br><br>
+            <li>IP는 나누는 방식에 따라 고정IP, 유동IP와 공인IP, 사설IP로 나눌 수 있다.<br><br>
+            <li><b>IPv4, IPv6</b><br><br>
+                <ul>
+                    <li>IP주소는 IPv4, IPv6 2가지 종류가 있으며, 일반적으로 IP주소라고 한다면 IPv4 주소를 말하는 것이다.<br><br>
+                    <li>IPv4는 IP version 4의 약자로 전 세계적으로 사용된 첫 번째 인터넷 프로토콜이다.<br>
+                        주소는 32비트 방식으로, 8비트씩 4자리로 되어 있으며 각 자리는 온점으로 구분한다.<br><br>
+                    <li>IPv4는 0 ~ 2^23(약 42억 9천)개의 주소를 가질 수 있는데, 전 세계적으로 인터넷 사용자 수가 급증하며 고갈될 위기에 있다.<br>
+                        이러한 문제를 해결하기 위해 나온것이 IPv6이다.<br><br>
+                    <li>IPv6는 IP version 6의 약자로 IPv4의 주소체계를 128비트 크기로 확장한 차세대 인터넷 프로토콜 주소이다.<br>
+                        16비트씩 8자리로 각 자리는 콜론으로 구분한다.<br>
+                        네트워크 속도, 보안적인 부분뿐만 아니라 여러면에서 뛰어나지만 기존 주소체계를 변경하는데 드는 비용이 많이 들어 완전한 상용화가 되지 않았다.    
+                </ul>     
+        </ul><hr><br>
+        <p style = "font-size : x-large">10. TCP와 UDP</p><hr> 
+        <ul>
+            <li><b>TCP</b><br><br>
+                <ul>     
+                    <li><b>TCP 정의</b><br><br>
+                        <ul>
+                            <li>TCP는 Transmission Control Protocol의 약자로 서버와 클라이언트간에 데이터를 신뢰성 있게 전달하기 위해서 만들어진 프로토콜이다.<br><br>
+                            <li>데이터를 전송하기 전에 데이터 전송을 위한 연결을 만드는 연결지향 프로토콜이다.<br><br>
+                            <li>데이터는 네트워크선로를 통해 전달되는 과정에서 손실되거나 순서가 뒤바뀌어서 전달될 수 있는데, TCP는 손실을 검색해내서, 이를 교정하고 순서를 재조립할 수 있도록 해준다.
+                        </ul><br><br> 
+                    <li><b>TCP의 특징</b><br><br>     
+                        <ul>
+                            <li><b>신뢰성</b>
+                                <p>신뢰성을 제공하려면 손상, 중복 또는 네트워크 계층에서 순서가 틀어진 데이터를 복구해야 하는데, TCP는 신뢰성을 실현하기 위해 적극적 수신, 통지, 재전송 체계를 사용한다.</p>
+                            <li><b>흐름 제어</b>
+                                <p>TCP는 송신자가 보낸 데이터의 양을 제어하는 흐름 제어 메커니즘을 구현한다.</p>
+                            <li><b>다중화</b>
+                                <p>TCP에서는 한 라우터의 많은 프로세스가 TCP통신 서비스를 동시에 사용할 수 있다. 이것을 TCP 다중화라 한다.</p>
+                            <li><b>데이터를 양방향으로 운반</b>
+                                <p>TCP는 하나의 전송선로에서 데이터가 동시에 양쪽방향으로 전송될 수 있다.</p>
+                        </ul>   
+                </ul><br>                
+            <li><b>UDP</b><br><br>
+                <ul>
+                    <li><b>UDP 정의</b><br><br>
+                        <ul>
+                            <li>UDP는 User Datagram Protocol의 약자로 비연결형, 신뢰성이 없는 전송 프로토콜이다.<br><br>
+                            <li>IP데이터그램을 캡슐화하여 보내는 방법과 연결 설정을 하지 않고 보내는 방법을 제공한다.<br><br>
+                        </ul>
+                    <il><b>UDP의 특징</b><br><br>
+                        <ul>
+                            <li>UDP는 흐름제어, 오류제어 또는 손상된 세그먼트의 수신에 대한 재전송을 하지 않는다. 따라서 내용이 전공 중에 손실 될 수 있고, 전송되는 세그먼트의 순서가 바뀔 수 있다.<br><br>
+                            <li>UDP는 TCP보다 간단하고 빠르다. (흐름제어를 하지 않기 때문에 전송 속도를 최대한 빠르게 할 수 있다.)
+                        </ul> 
+                </ul>
+        </ul>
+        <hr><br>
+    </body>
+</html>
