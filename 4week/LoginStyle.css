@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  /*기호나 번호 제거*/
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration-line: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  body {
+    background-color: #ededed;
+  }
+  
+  .loginbox {
+    width: 780px;
+    height: 550px;
+    margin: 0 auto;
+  }
+  
+  .loginbox h2 {  
+      text-align: center;
+      margin-top: 50px
+    }
+  
+  .loginbox h2>a {
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 50px;
+    }
+  
+  .loginbox form {
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    padding: 60px;
+    box-sizing: border-box;
+  }
+  
+  .loginbox fieldset {
+    border: none;
+  }
+  
+  .loginbox legend {
+    position: absolute;
+    left: -999em;
+  }
+  
+  .loginbox label {
+    display: block;
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .loginbox input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+    border: none;
+    background-color: #eded;
+    padding: 0 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .loginbox ul {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 60px;
+  }
+  
+  .loginbox li {
+    display: inline-block;
+    height: 12px;
+    line-height: 12px;
+  }
+  
+  .loginbox li:last-child {
+    border-left: 1px solid #333;
+    padding-left: 10px;
+    margin-left: 4px;
+  }
+  
+  
+  .loginbox a {
+    color: #333;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .loginbox button {
+    display: block;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    background-color: #1673ea;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+  }
