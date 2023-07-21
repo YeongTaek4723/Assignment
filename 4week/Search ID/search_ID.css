@@ -1,0 +1,117 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  /*기호나 번호 제거*/
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  header {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  header>a {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration-line: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  body {
+    background-color: white;
+  }
+  
+  .Search_ID_box {
+    width: 780px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  
+  .Search_ID_box h2 {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid black;
+    padding-bottom: 30px;
+  }
+  
+  .Search_ID_box form {
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    padding: 60px;
+    box-sizing: border-box;
+    margin-top: -50px;
+  }
+  
+  .Search_ID_box fieldset {
+    border: none;
+  }
+  
+  .Search_ID_box legend {
+    position: absolute;
+    left: -999em;
+  }
+  
+  .Search_ID_box label {
+    display: block;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .Search_ID_box input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 70px;
+    border: none;
+    background-color: #eded;
+    padding: 0 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
+  .Search_ID_box button {
+    display: block;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    background-color: black;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  
+  .find_another {
+    border-top: 1px solid #bab5b5;
+    padding-top: 30px;
+    font-size: 13px;
+    color: #5d5b5b;
+  }
+  
+  .find_another>a {
+    color: #777;
+    margin-left: 20px;
+    border-bottom: 1px solid #777;
+  }
