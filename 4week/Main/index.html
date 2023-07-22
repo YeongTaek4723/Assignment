@@ -9,74 +9,124 @@
 </head>
 
 <body>
-  <div class="nav">
-    <div class="company-name">
-      <a href="https://study.yeongtaek4723.repl.co">YT Study 공부방</a>
-    </div>
-    <div class="nav-right-items">
-      <ul>
-        <li><a href="#" rel="_self">로그인</a></li>
-        <li><a href="#">마이페이지</a></li>
-        <li><a href=""><a href="#">건의사항</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="main">
-    <div class="title">YT Study
-    </div>
-    <div class="sub-title">Welcome My Web
-    </div>
-
-    <div class="prices">
-      <div class="price-item">
-        <div class="price-item-title">
-          free
-        </div>
-        <div class="price-item-price">
-          $0 <span class="price-item-month">/ mo</span>
-        </div>
-        <div class="price-item-detail">
-          정보
-        </div>
-        <button class="price-item-button">
-          1 buy me
-        </button>
-      </div>
-
-      <div class="price-item">
-        <div class="price-item-title">
-          free
-        </div>
-        <div class="price-item-price">
-          $0 <span class="price-item-month">/ mo</span>
-        </div>
-        <div class="price-item-detail">
-          정보
-        </div>
-        <button class="price-item-button price-item-button--active">
-          2 buy me
-        </button>
-      </div>
-
-      <div class="price-item">
-        <div class="price-item-title">
-          free
-        </div>
-        <div class="price-item-price">
-          $0 <span class="price-item-month">/ mo</span>
-        </div>
-        <div class="price-item-detail">
-          정보
-        </div>
-        <button class="price-item-button price-item-button--active">
-          3 buy me
-        </button>
-      </div>
-
+  <div class="web-header-wrap">
+    <div class="web-header">
+      <span class="header-logo">
+        <a href="#">YT Study</a>
+      </span>
+      <span class="header-menu">
+        <span class="menu-item">
+          <a href="#">Home</a>
+        </span>
+        <span class="menu-item">
+          <a href="#">로그인</a>
+        </span>
+      </span>
     </div>
   </div>
-  <script src="script.js"></script>
+  <header>
+    <div class="home-main-header">
+      <div class="search-tag">
+        <input type="text" name="search-tag-name">
+      </div>
+    </div>
+  </header>
+
+  <section class="home-main-body">
+    <div class="background-main-body">
+      <div class="content-section">
+        <div class="content-title">
+          <span class="content-title-text">플랫폼별 컬렉션</span>
+          <span class="content-title-button">
+            <a href="#">모두 보기</a>
+          </span>
+        </div>
+        <div class="content-body">
+          <div class="main-tag-list">
+            <span class="tag-button">
+              <span class="tag-button-item">PC</span>
+            </span>
+            <span class="tag-button">
+              <span class="tag-button-item">PlayStation</span>
+            </span>
+            <span class="tag-button">
+              <span class="tag-button-item">스위치</span>
+            </span>
+            <span class="tag-button">
+              <span class="tag-button-item">모바일 게임</span>
+            </span>
+            <span class="tag-button">
+              <span class="tag-button-item">VR</span>
+            </span>
+          </div>
+
+          <div class="main-collection">
+            <span class="main-collection-item">
+              <a href="#">
+                <div class="collection-img">
+                  <img class="image" alt src=""></img>
+                </div>
+              </a>
+              <div class="collection-intel">
+                <div class="title">
+                  <a href="#">요즘 하기 좋은 FPS 추천 리스트</a>
+                </div>
+              </div>
+            </span>
+            <span class="main-collection-item">
+              <a href="#">
+                <div class="collection-img">
+                  <img class="image" alt src=""></img>
+                </div>
+              </a>
+              <div class="collection-intel">
+                <div class="title">
+                  <a href="#">요즘 하기 좋은 RPG 추천 리스트</a>
+                </div>
+              </div>
+            </span>
+            <span class="main-collection-item">
+              <a href="#">
+                <div class="collection-img">
+                  <img class="image" alt src=""></img>
+                </div>
+              </a>
+              <div class="collection-intel">
+                <div class="title">
+                  <a href="#">혼자서 하기 좋은 싱글 RPG 추천 리스트</a>
+                </div>
+              </div>
+            </span>
+            <span class="main-collection-item">
+              <a href="#">
+                <div class="collection-img">
+                  <img class="image" alt src=""></img>
+                </div>
+              </a>
+              <div class="collection-intel">
+                <div class="title">
+                  <a href="#">친구와 함께하는 경쟁 추천 리스트</a>
+                </div>
+              </div>
+            </span>
+            <span class="main-collection-item">
+              <a href="#">
+                <div class="collection-img">
+                  <img class="image" alt src=""></img>
+                </div>
+              </a>
+              <div class="collection-intel">
+                <div class="title">
+                  <a href="#">여럿이서 하기 좋은 스팀 추천 리스트</a>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"> </script>
 </body>
 
 </html>
