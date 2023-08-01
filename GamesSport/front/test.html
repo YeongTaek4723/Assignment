@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Games Spot</title>
+  <style>html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration-line: none;
+    color: inherit;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  span {
+    display: inline-block;
+  }
+  
+  input {
+    background-image: url("#");
+    background-repeat: no-repeat;
+    background-size: 13px;
+  }
+  
+  
+  .web-header-wrap {
+    width: 100%;
+    height: 76px;
+    border-bottom: 1px solid #ebeff8;
+  }
+  
+  .web-header {
+    width: 1000px;
+    height: 76px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-logo {
+    padding: 14px;
+    margin: 10px 0 0 -14px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .header-menu {
+    float: right;
+  }
+  
+  .menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 1rem;
+    padding: 1.5rem 0;
+  }
+  
+  .menu-item:first-child {
+    border-bottom: 5px solid #3f9dff;
+    padding-bottom: 26px;
+  }
+  
+  .menu-item:hover {
+    border-bottom: 5px solid gray;
+    padding-bottom: 26px;
+  }
+  
+  .home-main-header {
+    width: 960px;
+    margin: 0 auto;
+    padding: 40px 0;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  
+  .home-main-header>h2 {
+    font-size: 43px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .search-tag {
+    text-align: center;
+  }
+  
+  .search-tag>input {
+    width: 500px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: #ebeff8;
+    align-items: center;
+    border: none;
+  }
+  
+  .home-main-body {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #ced8e5;
+    background-color: #ebeff8
+  }
+  
+  .background-main-body {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .content-section {
+    width: 100%;
+  }
+  
+  .content-title {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 30px;
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  
+  .content-title-text {
+    font-weight: 700;
+  }
+  
+  .content-title-button {
+    line-height: 21px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3f9dff;
+  }
+  
+  .content-body {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 24px 0px 28px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .main-tag-list {
+    width: 912px;
+    margin: 0 24px 20px
+  }
+  
+  .tab-btn {
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+  
+  .tab-btn {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    border-radius: 4px;
+    padding: 0 8px 2px;
+  }
+  
+  .category-btn {
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+  
+  .category-btn{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    border-radius: 4px;
+    padding: 0 8px 2px;
+  }
+  
+  .tab-btn{
+    background-color: #ebeff8;
+    color: #b2bdce;
+  }
+  
+  .tab-btn.active{
+    background-color: #3f9dff;
+    color: #fafbfc;
+  }
+  
+  .tab-btn:hover:not(.disabled):not(:disabled) {
+    background-color: #e5f3ff;
+  }
+  
+  .category-btn{
+    background-color: #ebeff8;
+    color: #b2bdce;
+  }
+  
+  .category-btn.active{
+    background-color: #3f9dff;
+    color: #fafbfc;
+  }
+  
+  .category-btn:hover:not(.disabled):not(:disabled) {
+    background-color: #e5f3ff;
+  }
+  
+  .main-collection {
+    width: calc(100% - 48px);
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .main-collection-item:not(:last-child) {
+    width: 160px;
+    margin: 0 28px 0 0;
+  }
+  
+  .main-collection-item:first-child {
+    width: 160px;
+    margin: 0 28px 0 0;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .image {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+  
+    display: flex;
+  }
+  
+  .collection-intel {
+    width: 160px;
+    height: 88px;
+    margin-top: 10px;
+  }
+  
+  .title {
+    color: #1c232d;
+    font-size: 14px;
+    font-weight: bold;
+    width: 160;
+    height: 40px;
+    line-height: 20px;
+  }
+  
+  tr {
+    display: table-row;
+    border-bottom: gray 1px solid;
+  }
+  
+  .clamp-text {
+    padding: 0 0 30px 16px
+  }
+  
+  .clamp-section {
+    width: 100%;
+  }
+  
+  .content-body-popular-post {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 24px 0px 28px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  
+  
+  .game-item {
+    width: 100%;
+    border-bottom: 1px solid #ebeff8;
+    align-items: center;
+    padding: 32px 0px;
+  }
+  
+  .game-intel {
+    align-items: center;
+  }
+  
+  .game-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    margin: 0 20px 0 20px;
+  }
+  
+  .game-text {
+    width: 600px;
+    height: 160px;
+    vertical-align: top;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    line-height: 24px;
+  }
+  
+  .game-comment {
+    width: 900px;
+    margin: 20px 0 0 28px;
+    line-height: 22px;
+    background-color: #ebeff8;
+    padding: 12px 16px 16px;
+    border-radius: 13px;
+    font-size: 14px;
+    color: #697b96;
+  }
+  
+  section {
+    padding-bottom: 40px;
+  }
+  
+  .last-log {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  footer {
+    padding: 30px;
+    font-size: 1.1remp;
+  }</style>
+
+</head>
+
+<body>
+  <div class="web-header-wrap">
+    <div class="web-header">
+      <span class="header-logo">
+        <a href="#">Games Spot</a>
+      </span>
+      <span class="header-menu">
+        <span class="menu-item">
+          <a href="#">Home</a>
+        </span>
+        <span class="menu-item">
+          <a href="#">로그인</a>
+        </span>
+      </span>
+    </div>
+  </div>
+  <header>
+    <div class="home-main-header">
+      <h2>Games Spot 에서 원하는 게임을 평가 해보세요!</h2>
+      <div class="search-tag">
+        <input type="text" name="search-tag-name" placeholder="검색하고 싶은 게임 제목을 입력하세요">
+      </div>
+    </div>
+  </header>
+
+  <section class="home-main-body">
+    <div class="background-main-body">
+      <div class="content-section">
+        <div class="content-title">
+          <span class="content-title-text">플랫폼별 컬렉션</span>
+          <span class="content-title-button">
+            <a href="#">모두 보기</a>
+          </span>
+        </div>
+        <div class="content-body">
+          <div class="main-tag-list">
+            <span class="tab-btn" onclick="openTab(event, 'tab1')">PC</span>
+            <span class="tab-btn" onclick="openTab(event, 'tab2')">PlayStation</span>
+            <span class="tab-btn" onclick="openTab(event, 'tab3')">스위치</span>
+            <span class="tab-btn" onclick="openTab(event, 'tab4')">모바일 게임</span>
+            <span class="tab-btn" onclick="openTab(event, 'tab5')">VR</span>
+          </div>
+          <div id="tab1" class="tab-content">
+            <div class="main-collection">
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 FPS 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 RPG 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">혼자서 하기 좋은 싱글 RPG 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">친구와 함께하는 경쟁 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">여럿이서 하기 좋은 스팀 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="tab2" class="tab-content">
+            <div class="main-collection">
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 FPS 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="tab3" class="tab-content">
+            <div class="main-collection">
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 FPS 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 RPG 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="tab4" class="tab-content">
+            <div class="main-collection">
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 FPS 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 RPG 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div id="tab5" class="tab-content">
+            <div class="main-collection">
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 FPS 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+              <span class="main-collection-item">
+                <a href="#">
+                  <div class="collection-img">
+                    <img class="image" alt src=""></img>
+                  </div>
+                </a>
+                <div class="collection-intel">
+                  <div class="title">
+                    <a href="#">요즘 하기 좋은 RPG 추천 리스트</a>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="clamp-section">
+          <div class="content-title">
+            <span class="content-title-text">Games Spot 추천 게임</span>
+            <span class="content-title-button">
+              <a href="#">모두 보기</a>
+          </div>
+          <div class="content-body-popular-post">
+            <div class="main-tag-list">
+              <span class="category-btn" onclick="openCategory(event, 'category1')">FPS</span>
+              <span class="category-btn" onclick="openCategory(event, 'category2')">RPG</span>
+              <span class="category-btn" onclick="openCategory(event, 'category3')">스포츠</span>
+              <span class="category-btn" onclick="openCategory(event, 'category4')">시뮬레이션</span>
+              <span class="category-btn" onclick="openCategory(event, 'category5')">전략</span>
+            </div>
+            <div id="category1" class="games-item">
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">1. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">2. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">3. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">4. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">5. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+            </div>
+            <div id="category2" class="games-item" style="display: none;">
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">1. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">2. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">3. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">4. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">5. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+            </div>
+            <div id="category3" class="games-item" style="display: none;">
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">1. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">2. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">3. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">4. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">5. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+            </div>
+            <div id="category4" class="games-item" style="display: none;">
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">1. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">2. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">3. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">4. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">5. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+            </div>
+            <div id="category5" class="games-item" style="display: none;">
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">1. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">2. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">3. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">4. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+              <div class="game-item">
+                <div class="game-intel">
+                  <span class="game-image">
+                    <a href="#">
+                      <div class="image-load">
+                        <img class="game-image" alt src=""></img>
+                      </div>
+                    </a>
+                  </span>
+                  <span class="game-text">
+                    <div class="game-name">
+                      <a href="#">5. 미정</a>
+                    </div>
+                  </span>
+                </div>
+                <div class="game-comment">
+                  간단한 게임 설명란
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="last-log"><a href="#">Games Spot</a></div>
+  </section>
+  <footer>제작 : 오영택</footer>
+<script>function openTab(evt, tabName) {
+    var i, tabContent, tabBtn;
+  
+    // 모든 탭 내용과 버튼의 활성 클래스 제거
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+      tabContent[i].style.display = "none";
+    }
+  
+    tabBtn = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tabBtn.length; i++) {
+      tabBtn[i].classList.remove("active");
+    }
+  
+    // 클릭한 탭 내용과 버튼에 활성 클래스 추가
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+  }
+  
+  // 초기 로딩 시 첫 번째 탭을 활성화
+  document.getElementById("tab1").style.display = "block";
+  document.getElementsByClassName("tab-btn")[0].classList.add("active");
+  
+  
+  
+  
+  function openCategory(evt, categoryName) {
+    var i, categoryContent, categoryBtn;
+  
+    // 모든 탭 내용과 버튼의 활성 클래스 제거
+    categoryContent = document.getElementsByClassName("games-item");
+    for (i = 0; i < categoryContent.length; i++) {
+      categoryContent[i].style.display = "none";
+    }
+  
+    categoryBtn = document.getElementsByClassName("category-btn");
+    for (i = 0; i < categoryBtn.length; i++) {
+      categoryBtn[i].classList.remove("active");
+    }
+  
+    // 클릭한 탭 내용과 버튼에 활성 클래스 추가
+    document.getElementById(categoryName).style.display = "block";
+    evt.currentTarget.classList.add("active");
+  }
+  
+  // 초기 로딩 시 첫 번째 탭을 활성화
+  document.getElementById("category1").style.display = "block";
+  document.getElementsByClassName("category-btn")[0].classList.add("active");
+  
+  
+  </script>
+</body>
+
+</html>
