@@ -12,9 +12,10 @@ app.use(
         })
 );
 
+app.use(express.static('front'));
 
 app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, './', 'front', 'test.html'));
+        res.sendFile(path.join(__dirname, './', 'front', 'main.html'));
 });
 
 
