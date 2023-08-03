@@ -2,10 +2,11 @@
 Description = Ubuntu my server 
 
 [Service]
-ExecStart = /home/ubuntu/gamesspot/index.js
+ExecStart = /home/ubuntu/Assignmnet/GamesSpot/index.js
 Restart = always
 Group = nogroup
-WorkingDirectory = /home/ubuntu/gamesspot
+WorkingDirectory = /home/ubuntu/Assignment/GamesSpot
 
 [Install]
 WantedBy = multi-user.target
+
