@@ -2,7 +2,7 @@
 Description = Ubuntu my server 
 
 [Service]
-ExecStart = /home/ubuntu/Assignmnet/GamesSpot/index.js
+ExecStart = /home/ubuntu/Assignment/GamesSpot/index.js
 Restart = always
 Group = nogroup
 WorkingDirectory = /home/ubuntu/Assignment/GamesSpot
