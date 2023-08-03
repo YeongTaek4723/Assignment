@@ -1,0 +1,102 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /*기호나 번호 제거*/
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration-line: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  body {
+    background-color: #ededed;
+  }
+  
+  .membershipbox {
+    width: 780px;
+    height: 550px;
+    margin: 0 auto;
+  }
+  
+  .membershipbox h2 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .membershipbox h2>a {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  .membershipbox>h2>span {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  .membershipbox form {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    padding: 60px;
+    box-sizing: border-box;
+    margin-top: 50px;
+  }
+  
+  .membershipbox fieldset {
+    border: none;
+  }
+  
+  .membershipbox legend {
+    position: absolute;
+    left: -999em;
+  }
+  
+  .membershipbox input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+    border: none;
+    background-color: #edd9eddd;
+    padding: 0 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  
+  .membershipbox a {
+    color: #333;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+  }
+  
+  .membershipbox button {
+    display: block;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    background-color: #1673ea;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 80px;
+    border-radius: 8px;
+  }
