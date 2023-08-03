@@ -1,0 +1,11 @@
+[Unit]
+Description = Ubuntu my server 
+
+[Service]
+ExecStart = /home/ubuntu/gamesspot/index.js
+Restart = always
+Group = nogroup
+WorkingDirectory = /home/ubuntu/gamesspot
+
+[Install]
+WantedBy = multi-user.target
