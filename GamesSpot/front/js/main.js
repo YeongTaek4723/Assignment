@@ -52,7 +52,7 @@ document.getElementsByClassName("category-btn")[0].classList.add("active");
 const state = document.querySelector('.state');
     
 if(document.cookie.indexOf('user=') === -1) {
-    const loginBtn = document.createElement('button');
+    const loginBtn = document.createElement('menu-item');
     loginBtn.textContent = '로그인';
     loginBtn.addEventListener('click', e => {
         location.href = '/login';
