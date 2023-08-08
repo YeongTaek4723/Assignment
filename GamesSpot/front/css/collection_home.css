@@ -1,0 +1,205 @@
+html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration-line: none;
+    color: inherit;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  span {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  input {
+    background-image: url("#");
+    background-repeat: no-repeat;
+    background-size: 13px;
+  }
+  
+  
+  .web-header-wrap {
+    width: 100%;
+    height: 76px;
+    border-bottom: 1px solid #ebeff8;
+    background-color: #fff;
+    position: sticky;
+    top: 0px;
+  }
+  
+  .web-header {
+    width: 1000px;
+    height: 76px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-logo {
+    padding: 14px;
+    margin: 10px 0 0 -14px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .header-menu {
+    float: right;
+  }
+  
+  .menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 1rem;
+    padding: 1.5rem 0;
+  }
+  
+  .menu-item:first-child {
+    border-bottom: 5px solid #3f9dff;
+    padding-bottom: 26px;
+  }
+  
+  .menu-item:hover {
+    border-bottom: 5px solid gray;
+    padding-bottom: 26px;
+  }
+  
+  .page-body {
+    min-height: calc(100vh - 76px);
+  }
+  
+  
+  .category-page {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+    padding: 100px 20px 150px;
+    display: flex;
+  }
+  
+  .category-left {
+    position: sticky;
+    top: 160px;
+  }
+  
+  .left-section {
+    width: 200px;
+  }
+  
+  .right-section {
+    top: auto;
+    bottom: auto;
+  }
+  
+  .tab-btn {
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+  
+  .tab-btn {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    border-radius: 4px;
+    padding: 0 8px 2px;
+  }
+  
+  .tab-btn {
+    color: #b2bdce;
+  }
+  
+  .tab-btn.active {
+    color: #3f9dff;
+  }
+  
+  .tab-btn:hover:not(.disabled):not(:disabled) {
+    color: #e5f3ff;
+  }
+  
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  
+  .collection-game-wrap {
+    width: 760px;
+  }
+  
+  .feed-header {
+    line-height: 36px;
+    margin: 0 0 8px;
+  }
+  
+  .total-cnt {
+    font-size: 15px;
+    color: #697b96;
+  }
+  
+  .collection-list {
+    margin-top: 20px
+  }
+  
+  .feed-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px 80px 0;
+  }
+  
+  .collection-item {
+    width: 160px;
+  }
+  
+  .image-wrap {
+    width: 160px;
+    height: 160px;
+    position: relative;
+  }
+  
+  .collection-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    box-shadow: 0 6px 10px 6px rgba(3, 24, 39, .07)
+  }
+  
+  .collection-info {
+    height: 88px;
+  }
+  
+  .text-wrap {
+    margin-top: 12px;
+    height: 62px;
+  }
+  
+  .title {
+    line-height: 20px;
+    max-height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .cnt-wrap {
+    margin-top: 8px;
+    line-height: 18px;
+    font-size: 11px;
+    color: #95a3b8;
+  }
+  
+  footer {
+    padding: 30px;
+    font-size: 1.1remp;
+    border-top: 1px solid #ebeff8
+  }

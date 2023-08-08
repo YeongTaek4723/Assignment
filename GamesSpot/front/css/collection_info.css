@@ -1,0 +1,417 @@
+html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration-line: none;
+    color: inherit;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  span {
+    display: inline-block;
+  }
+  
+  input {
+    background-image: url("#");
+    background-repeat: no-repeat;
+    background-size: 13px;
+  }
+  
+  
+  .web-header-wrap {
+    width: 100%;
+    height: 76px;
+    border-bottom: 1px solid #ebeff8;
+    background-color: #fff;
+    position: sticky;
+    top: 0px;
+  }
+  
+  .web-header {
+    width: 1000px;
+    height: 76px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-logo {
+    padding: 14px;
+    margin: 10px 0 0 -14px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .header-menu {
+    float: right;
+  }
+  
+  .menu-item {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 1rem;
+    padding: 1.5rem 0;
+  }
+  
+  .menu-item:first-child {
+    border-bottom: 5px solid #3f9dff;
+    padding-bottom: 26px;
+  }
+  
+  .menu-item:hover {
+    border-bottom: 5px solid gray;
+    padding-bottom: 26px;
+  }
+  
+  .collection-main-header {
+    width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .back-collection {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(134, 147, 167);
+    margin-top: 30px;
+  }
+  
+  .collection-info {
+    margin-top: 40px;
+  }
+  
+  .collection-image {
+    padding: 10px 91px 0 34px;
+  }
+  
+  .collection-main-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  
+  .collection-text {
+    width: 630px;
+  }
+  
+  .main-info {
+    margin-top: 8px;
+    padding: 0 0 16px;
+    position: relative;
+    top: -50px;
+  }
+  
+  .collection-title {
+    width: 600px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .collection-desc {
+    margin: 20px 0 0;
+    font-size: 14px;
+    color: #5b6d84;
+  }
+  
+  .time-cnt {
+    margin: 50px 0 0;
+    font-size: 12px;
+    color: #95a3b8;
+  }
+  
+  .reaction-wrap {
+    width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .reaction {
+    padding: 16px 20px 20px;
+    width: 300px;
+    border-radius: 13px;
+    box-shadow: 0 4px 5px rgba(3, 24, 39, .06),
+      0 1px 10px rgba(3, 24, 39, .12),
+      0 2px 4px rgba(3, 24, 39, .16);
+  }
+  
+  .like-info {
+    margin-top: 16px;
+    border-top: 1px solid #ebeff8;
+    padding-top: 16px;
+    font-size: 13px;
+    color: #95a3b8;
+    line-height: 28px;
+  }
+  
+  .button-item {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    color: #95a3b8;
+    font-size: 12px;
+  }
+  
+  .like-info {
+    margin-left: 4px
+  }
+  
+  .like-info-text {
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .tab-line {
+    margin-top: 40px;
+    width: 100%;
+    border-bottom: 1px solid #ebeff8;
+    border-top: 1px solid #ebeff8;
+    background-color: #fff;
+    position: sticky;
+    top: 75px;
+  }
+  
+  .collection-game-tab {
+    width: 1000px;
+    padding: 0 20px;
+    margin: auto;
+  }
+  
+  .collection-game {
+    min-width: 160px;
+    height: 57px;
+    line-height: 55px;
+  }
+  
+  .game-text {
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  
+  .collection-body {
+    width: 1000px;
+    padding: 60px 20px;
+    margin: auto;
+  }
+  
+  .game-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .game-item {
+    width: 100%;
+    border-bottom: 1px solid #ebeff8;
+    align-items: center;
+    padding: 32px 0px;
+  }
+  
+  .game-info {
+    align-items: center;
+  }
+  
+  .game-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    margin: 0 20px 0 20px;
+  }
+  
+  .game-info-name {
+    width: 430px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .game-info-text {
+    width: 600px;
+    height: 160px;
+    vertical-align: top;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    line-height: 24px;
+  }
+  
+  .game-owner {
+    line-height: 19px;
+    margin-top: 4px;
+    color: #95a3b8;
+  }
+  
+  .owner-text {
+    font-size: 12px;
+  }
+  
+  .game-score {
+    margin-top: 44px;
+    width: 100%;
+    height: 28px;
+  }
+  
+  .game-score-item {
+    margin-right: 16px;
+  }
+  
+  .score-value {
+    background-color: #3f9dff;
+    border-radius: 6px 6px 6px 0;
+    line-height: 27px;
+    padding: 0 8px 1px;
+    margin-right: 6px;
+    font-size: 14px;
+    color: #fafbfc;
+    font-weight: 700;
+  }
+  
+  .score-text {
+    line-height: 14px;
+  }
+  
+  .score-title {
+    color: #3f9dff;
+    font-size: 11px;
+    font-weight: 700;
+    position: relative;
+    top: 6px;
+  }
+  
+  .score-text {
+    font-size: 10px;
+    color: #95a3b8;
+  }
+  
+  .cnt-text {
+    display: inline;
+    position: relative;
+    top: 8px;
+  }
+  
+  .score-cnt-value {
+    font-weight: 700;
+  }
+  
+  .game-info-comment {
+    width: 900px;
+    margin: 20px 0 0 28px;
+    line-height: 22px;
+    background-color: #ebeff8;
+    padding: 12px 16px 16px;
+    border-radius: 13px;
+    font-size: 14px;
+    color: #697b96;
+  }
+  
+  .collection-comment-list {
+    margin-top: 48px;
+  }
+  
+  .comment-header {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+  
+  .commen-text {
+    display: inline;
+  }
+  
+  .commen-cnt {
+    color: #7f8fa6;
+    font-weight: 400;
+  }
+  
+  .comment-wrap {
+    padding: 12px 0 0;
+  }
+  
+  .more-comment {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-top: 15px;
+    cursor: pointer;
+  }
+  
+  .comment-item:first-child {
+    padding-top: 0
+  }
+  
+  .comment-item {
+    width: 100%;
+    padding-top: 12px;
+  }
+  
+  .text-body {
+    width: 530px;
+  }
+  
+  .user-nickname {
+    margin-top: 1px;
+    line-height: 19px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .comment-wrap {
+    width: calc(100% - 36px);
+    position: relative;
+  }
+  
+  .user-comment {
+    line-height: 19px;
+    font-size: 13px;
+  }
+  
+  .comment-footer {
+    width: calc(100% - 40px);
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ebeff8;
+    line-height: 18px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #95a3b8;
+  }
+  
+  .comment-button {
+    padding: 16px 0;
+  }
+  
+  .comment-input {
+    width: calc(100% - 36px);
+    min-height: 38px;
+    background-color: #ebeff8;
+    border-radius: 19px;
+    padding: 9px 8px 10px 16px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #b2bdce;
+  }
+  
+  .more-item {
+    width: 100%;
+    background-color: #e5f3ff;
+    color: #3f8eff;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  footer {
+    padding: 30px;
+    font-size: 1.1remp;
+    border-top: 1px solid #ebeff8
+  }
