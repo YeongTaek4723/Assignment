@@ -27,6 +27,9 @@ input {
   background-size: 13px;
 }
 
+.state{
+	 cursor: pointer;
+}
 
 .web-header-wrap {
   width: 100%;
