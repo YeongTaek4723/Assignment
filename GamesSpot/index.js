@@ -52,11 +52,6 @@ app.get('/login', (req, res) => {
 });
 
 
-app.get('/collection', (req, res) => {
-        res.sendFile(path.join(__dirname + './front/collection_info.html'));
-});
-
-
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
 });
