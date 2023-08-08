@@ -49,3 +49,24 @@ document.getElementsByClassName("category-btn")[0].classList.add("active");
 
 
 
+const state = document.querySelector('.state');
+    
+if(document.cookie.indexOf('user=') === -1) {
+    const loginBtn = document.createElement('button');
+    loginBtn.textContent = '로그인';
+    loginBtn.addEventListener('click', e => {
+        location.href = '/login';
+    });
+    state.append(loginBtn);
+}
+else {
+    state.textContent = document.cookie
+    .split('user=')[1].split(';')[0]
+    + '님 환영합니다.';
+    const logoutBtn = document.createElement('button');
+    logoutBtn.textContent = '로그아웃';
+    logoutBtn.addEventListener('click', e => {
+        location.href = '/logout';
+    });
+    state.append(logoutBtn);
+}
