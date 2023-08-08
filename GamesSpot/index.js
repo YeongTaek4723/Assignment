@@ -44,13 +44,22 @@ app.get('/api', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-	res.sendFile(path.join(__dirname + './front/main.html'));
+	res.sendFile(path.join(__dirname + '/front/main.html'));
 });
 
 app.get('/login', (req, res) => {
-	res.sendFile(path.join(__dirname + './front/login.html'));
+	res.sendFile(path.join(__dirname + '/front/login.html'));
 });
 
+
+app.get('/collection', (req, res) => {
+        res.sendFile(path.join(__dirname + '/front/collection_home.html'));
+});
+
+
+app.get('/game', (req, res) => {
+        res.sendFile(path.join(__dirname + '/front/game_home.html'));
+});
 
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
