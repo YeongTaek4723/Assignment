@@ -52,12 +52,12 @@ app.get('/login', (req, res) => {
 });
 
 
-app.get('/collection', (req, res) => {
+app.get('/collection_home', (req, res) => {
         res.sendFile(path.join(__dirname + '/front/collection_home.html'));
 });
 
 
-app.get('/game', (req, res) => {
+app.get('/game_home', (req, res) => {
         res.sendFile(path.join(__dirname + '/front/game_home.html'));
 });
 
