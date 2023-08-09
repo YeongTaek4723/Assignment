@@ -178,6 +178,7 @@ html {
     background-color: #fff;
     position: sticky;
     top: 75px;
+    z-index: 1000;
   }
   
   .collection-game-tab {
