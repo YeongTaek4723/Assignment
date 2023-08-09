@@ -61,6 +61,18 @@ app.get('/game', (req, res) => {
         res.sendFile(path.join(__dirname + '/front/game_home.html'));
 });
 
+app.get('/membership', (req, res) => {
+        res.sendFile(path.join(__dirname + '/front/membership.html'));
+});
+
+app.get('/findID', (req, res) => {
+        res.sendFile(path.join(__dirname + '/front/find_id.html'));
+});
+
+app.get('/findPw', (req, res) => {
+        res.sendFile(path.join(__dirname + '/front/find_pw.html'));
+});
+
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
 });
