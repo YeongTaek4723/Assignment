@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Games Spot</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="web-header-wrap">
+    <div class="web-header">
+      <span class="header-logo">
+        <a href="#">Games Spot</a>
+      </span>
+      <span class="header-menu">
+        <span class="menu-item">
+          <a href="#">Home</a>
+        </span>
+        <span class="menu-item">
+          <a href="#">로그인</a>
+        </span>
+      </span>
+    </div>
+  </div>
+  <header>
+    <div class="game-header">
+      <div class="game-info-wrap">
+        <div class="game-wrap">
+          <span class="wrapper-info">
+            <div class="game-info">
+              <div class="game-info-wrap">
+                <div class="info-title">제목</div>
+              </div>
+            </div>
+            <div class="info-score-wrap">
+              <div class="score-info">점수</div>
+              <div class="score-cnt-info">
+                <span class="score-cnt">N</span>명이 평가
+              </div>
+            </div>
+          </span>
+          <span class="game-image-wrap">
+            <img class="games-image" src="#">
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="tab-line">
+    <div class="collection-game-tab">
+      <span class="collection-game">
+        <span class="game-tab">
+          <span class="game-text">리뷰</span>
+          <span class="game-cnt">개수</span>
+        </span>
+      </span>
+    </div>
+  </div>
+  <div class = "game-detail-main">
+    <div class="game-detail-wrap">
+    <div class="game-detail-info">
+      <div class="game-feed-title-wrap">
+        <div class="game-feed-title">
+          <span class="game-feed-title-text">게임 정보</span>
+        </div>
+      </div>
+      <div class="game-detail-info-content-wrap">
+        <div class="game-detail-info">정보</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="wrap">
+    <h1>리뷰</h1>
+    <form name="reviewform" class="reviewform" method="post" action="/collection">
+      <input type="hidden" name="rate" id="rate" value="0" />
+      <p class="title_star">별점과 리뷰를 남겨주세요.</p>
+
+      <div class="review_rating">
+        <div class="warning_msg">별점을 선택해 주세요.</div>
+        <div class="rating">
+          <!-- 해당 별점을 클릭하면 해당 별과 그 왼쪽의 모든 별의 체크박스에 checked 적용 -->
+          <input type="checkbox" name="rating" id="rating1" value="1" class="rate_radio" title="1점">
+          <label for="rating1"></label>
+          <input type="checkbox" name="rating" id="rating2" value="2" class="rate_radio" title="2점">
+          <label for="rating2"></label>
+          <input type="checkbox" name="rating" id="rating3" value="3" class="rate_radio" title="3점">
+          <label for="rating3"></label>
+          <input type="checkbox" name="rating" id="rating4" value="4" class="rate_radio" title="4점">
+          <label for="rating4"></label>
+          <input type="checkbox" name="rating" id="rating5" value="5" class="rate_radio" title="5점">
+          <label for="rating5"></label>
+        </div>
+      </div>
+      <div class="review_contents">
+        <div class="warning_msg">5자 이상으로 작성해 주세요.</div>
+        <textarea rows="10" class="review_textarea"></textarea>
+      </div>
+      <div class="cmd">
+        <input class="review-button" type="button" name="save" id="save" value="등록">
+      </div>
+    </form>
+  </div>
+  <div class="game-main-body">
+    <div class="review-list-wrap">
+      <div class="game-review-item-weap review">
+        <div class="game-review-header">
+          <div class="user-info-wrap">
+            <span class="user-info">
+              <span class="user-nickname">작성자 닉네임</span>
+              <span class="review-uplord">작성 날짜</span>
+            </span>
+          </div>
+          <div class="review-point">
+            <span class="review-score">평가한 점수</span>
+          </div>
+        </div>
+        <div class="review-content-wrap">
+          <div class="review-content">리뷰 내용</div>
+        </div>
+      </div>
+      <div class="game-review-item-weap review">
+        <div class="game-review-header">
+          <div class="user-info-wrap">
+            <span class="user-info">
+              <span class="user-nickname">작성자 닉네임</span>
+              <span class="review-uplord">작성 날짜</span>
+            </span>
+          </div>
+          <div class="review-point">
+            <span class="review-score">평가한 점수</span>
+          </div>
+        </div>
+        <div class="review-content-wrap">
+          <div class="review-content">리뷰 내용</div>
+        </div>
+      </div>
+      <div class="game-review-item-weap review">
+        <div class="game-review-header">
+          <div class="user-info-wrap">
+            <span class="user-info">
+              <span class="user-nickname">작성자 닉네임</span>
+              <span class="review-uplord">작성 날짜</span>
+            </span>
+          </div>
+          <div class="review-point">
+            <span class="review-score">평가한 점수</span>
+          </div>
+        </div>
+        <div class="review-content-wrap">
+          <div class="review-content">리뷰 내용</div>
+        </div>
+      </div>
+      <div class="game-review-item-weap review">
+        <div class="game-review-header">
+          <div class="user-info-wrap">
+            <span class="user-info">
+              <span class="user-nickname">작성자 닉네임</span>
+              <span class="review-uplord">작성 날짜</span>
+            </span>
+          </div>
+          <div class="review-point">
+            <span class="review-score">평가한 점수</span>
+          </div>
+        </div>
+        <div class="review-content-wrap">
+          <div class="review-content">리뷰 내용</div>
+        </div>
+      </div>
+      <div class="game-review-item-weap review">
+        <div class="game-review-header">
+          <div class="user-info-wrap">
+            <span class="user-info">
+              <span class="user-nickname">작성자 닉네임</span>
+              <span class="review-uplord">작성 날짜</span>
+            </span>
+          </div>
+          <div class="review-point">
+            <span class="review-score">평가한 점수</span>
+          </div>
+        </div>
+        <div class="review-content-wrap">
+          <div class="review-content">리뷰 내용</div>
+        </div>
+      </div>
+      <div class="game-review-item-weap review">
+        <div class="game-review-header">
+          <div class="user-info-wrap">
+            <span class="user-info">
+              <span class="user-nickname">작성자 닉네임</span>
+              <span class="review-uplord">작성 날짜</span>
+            </span>
+          </div>
+          <div class="review-point">
+            <span class="review-score">평가한 점수</span>
+          </div>
+        </div>
+        <div class="review-content-wrap">
+          <div class="review-content">리뷰 내용</div>
+        </div>
+      </div>
+      <div class="more-review" id="loadMoreReview">리뷰 더보기</div>
+    </div>
+  </div>
+  <footer>제작 : 오영택</footer>
+  <script src="/js/game_info.js"></script>
+</body>
+
+</html>

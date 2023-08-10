@@ -29,7 +29,7 @@ app.use(
 
 app.use(
 	cors({
-		origin:'http://13.125.71.97:3000',
+		origin:'https://gamesspot.store',
 		credentials : true,
 	})
 );
@@ -71,6 +71,10 @@ app.get('/findID', (req, res) => {
 
 app.get('/findPw', (req, res) => {
         res.sendFile(path.join(__dirname + '/front/find_pw.html'));
+});
+
+app.get('/search_game', (req, res) => {
+	res.sendFile(path.join(__dirname + '/front/search_game.html'));
 });
 
 app.listen(port, () => {
