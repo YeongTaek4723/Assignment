@@ -46,10 +46,10 @@ app.use(express.static('front'));
 //});
 
 app.post('/membership', (req, res) => {
-	const {nickname, id, password, email} = req.body;
+	const {id, password, nickname, email} = req.body;
 
-	if(nickname && id && password && email){
-		connection.query('SELECT * FROM user-info WHERE id = ?', [id], (error, results, fields) => {
+	if( id && password && nickname && email){
+		connection.query('SELECT * FROM user-info WHERE  = ?', [id], (error, result, fields) => {
 			if(error)	throw error;
 			if(results.length <= 0){
 				connection.query('INSERT INTO user-info (id, pw, nickname, email) VALUES(?, ?, ?, ?)', [id, password, nickname, email], (error, data) => {
