@@ -1,6 +1,7 @@
 const logid = document.getElementById('login_id');
 const logpw = document.getElementById('login_pw');
 
+
 document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => {
         document.body.classList.remove('body');

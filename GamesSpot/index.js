@@ -57,11 +57,11 @@ app.post('/membership', (req, res) => {
 					res.send('<script type="text/javascript">alert("회원가입이 완료되었습니다."); location.replace("/login");<script>');
 				});
 			} else {
-				res.send('<script type="text/javascript">alert("이미 사용중인 아이디 입니다."); location.replace("/membership");<script>');
+				res.send('<script type="text/javascript">alert("이미 사용중인 아이디 입니다."); location.href = "/membership";<script>');
 			}
 		});	
 	} else {
-		res.send('<script type="text/javascript">alert("모든 입력칸에 입력을 해주세요."); location.replace("/membership");<script>');
+		res.send('<script type="text/javascript">alert("모든 입력칸에 입력을 해주세요."); location.replace = "/membership";<script>');
 	}
 });
 
