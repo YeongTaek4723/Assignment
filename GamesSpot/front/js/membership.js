@@ -1,6 +1,5 @@
 const logid = document.getElementById('login_id');
 const logpw = document.getElementById('login_pw');
-const logForm = document.getElementById('login_form');
 
 document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => {
@@ -29,5 +28,3 @@ function checkPW(event)
         event.preventDefault();
     }
 }
-
-regisForm.addEventListener("submit",checkPW);
