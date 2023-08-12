@@ -16,6 +16,7 @@ const session = require('express-session');
 app.set('view engine', 'ejs');
 app.set('view', path.join(__dirname));
 
+app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
@@ -34,14 +35,39 @@ app.use(
 	})
 );
 
+app.use(express.urlencoded({extended: false}));
 app.use(express.static('front'));
 
-app.get('/api', (req, res) => {
-	connection.query('SELECT * FROM GamesSpot', (error, rows) => {
-		if (error) throw error;
-		res.send(rows);
-	});
+//app.get('/api', (req, res) => {
+//	connection.query('SELECT * FROM GamesSpot', (error, rows) => {
+//		if (error) throw error;
+//		res.send(rows);
+//	});
+//});
+
+app.post('/membership', (req, res) => {
+	const {nickname, id, password, email} = req.body;
+
+	if(nickname && id && password && email){
+		connection.query('SELECT * FROM User-Info WHERE ID = ?', [id], (error, result, fields) => {
+			if(error)	throw error;
+			if(results.length <= 0){
+				connection.query('INSERT INTO User-Info (ID, PW, NickName, Email) VALUES(?, ?, ?, ?)', [id, password, nickname, email], (error, data) => {
+					if(error)	throw error;
+					res.send('<script type="text/javascript">alert("회원가입이 완료되었습니다."); location.replace("/login");<script>');
+				});
+			} else {
+				res.send('<script type="text/javascript">alert("이미 사용중인 아이디 입니다."); location.replace("/membership");<script>');
+			}
+		});	
+	} else {
+		res.send('<script type="text/javascript">alert("모든 입력칸에 입력을 해주세요."); location.replace("/membership");<script>');
+	}
 });
+
+
+
+
 
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname + '/front/main.html'));
