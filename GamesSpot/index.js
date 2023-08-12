@@ -48,8 +48,7 @@ app.use(express.static('front'));
 app.post('/membership', (req, res) => {
 	const {id, password, nickname, email} = req.body;
 
-	// MySQL에 회원 정보 삽입
-	const sql = 'INSERT INTO user_info (user_id, user_name, user_pw) VALUES (?, ?, ?)';
+	const sql = 'INSERT INTO user-info (id, pw, nickname, email) VALUES (?, ?, ?, ?)';
 	connection.query(sql, [id, password ,  nickname, email], (err, result) => {
 	if (err) {
 		console.error(err);
