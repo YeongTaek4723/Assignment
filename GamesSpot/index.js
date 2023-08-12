@@ -48,21 +48,16 @@ app.use(express.static('front'));
 app.post('/membership', (req, res) => {
 	const {id, password, nickname, email} = req.body;
 
-	if( id && password && nickname && email){
-		connection.query('SELECT * FROM user-info WHERE  = ?', [id], (error, result, fields) => {
-			if(error)	throw error;
-			if(results.length <= 0){
-				connection.query('INSERT INTO user-info (id, pw, nickname, email) VALUES(?, ?, ?, ?)', [id, password, nickname, email], (error, data) => {
-					if(error)	throw error2;
-					res.send('<script type="text/javascript">alert("회원가입이 완료되었습니다."); location.replace("/login");<script>');
-				});
-			} else {
-				res.send('<script type="text/javascript">alert("이미 사용중인 아이디 입니다."); location.href = "/membership";<script>');
-			}
-		});	
+	// MySQL에 회원 정보 삽입
+	const sql = 'INSERT INTO user_info (user_id, user_name, user_pw) VALUES (?, ?, ?)';
+	connection.query(sql, [id, password ,  nickname, email], (err, result) => {
+	if (err) {
+		console.error(err);
+		res.status(500).json({ error: 'Failed to register' });
 	} else {
-		res.send('<script type="text/javascript">alert("모든 입력칸에 입력을 해주세요."); location.replace = "/membership";<script>');
+		res.json({ message: 'Successfully registered' });
 	}
+	});
 });
 
 
