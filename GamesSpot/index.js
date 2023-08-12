@@ -4,6 +4,16 @@ const mysql = require('mysql');
 const dbconfig = require('./config/dbinfo.js');
 const connection = mysql.createConnection(dbconfig);
 
+  
+  // 데이터베이스 연결 확인
+  connection.connect((err) => {
+	if (err) {
+	  console.error('Error connecting to database: ', err);
+	  return;
+	}
+	console.log('Connected to database!');
+  });
+
 const app = express();
 const port = 3000;
 const path = require('path');
