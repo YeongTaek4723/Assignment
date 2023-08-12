@@ -1,9 +1,10 @@
-const regisId = document.getElementById('login_id');
-const regisPw = document.getElementById('login_pw');
+const logid = document.getElementById('login_id');
+const logpw = document.getElementById('login_pw');
+const logForm = document.getElementById('login_form');
 
 document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => {
-        document.body.classList.remove('fade');
+        document.body.classList.remove('body');
     });
 });
 
@@ -15,16 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function checkPW(event)
 {
-    var regexPw = /^[A-Za-z0-9`~!@#\$%\^&\*\(\)\{\}\[\]\-_=\+\\|;:'"<>,\./\?]{8,20}$/;
+    var logpw = /^[A-Za-z0-9`~!@#\$%\^&\*\(\)\{\}\[\]\-_=\+\\|;:'"<>,\./\?]{8,20}$/;
 
-    if(regisId.value.length < 8)
+    if(logid.value.length < 8)
     {
         alert("아이디는 8자 이상이어야 합니다.");
         event.preventDefault();
     }
-    else if(!regexPw.test(regisPw.value))
+    else if(!logpw.test(logpw.value))
     {
         alert("10~20자 공백을 제외한 영문 대소문자, 숫자, 특수문자를 사용하세요.");
         event.preventDefault();
     }
 }
+
+regisForm.addEventListener("submit",checkPW);
