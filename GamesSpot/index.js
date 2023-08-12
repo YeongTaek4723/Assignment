@@ -49,11 +49,11 @@ app.post('/membership', (req, res) => {
 	const {nickname, id, password, email} = req.body;
 
 	if(nickname && id && password && email){
-		connection.query('SELECT * FROM User-Info WHERE ID = ?', [id], (error, result, fields) => {
+		connection.query('SELECT * FROM user-info WHERE id = ?', [id], (error, results, fields) => {
 			if(error)	throw error;
 			if(results.length <= 0){
-				connection.query('INSERT INTO User-Info (ID, PW, NickName, Email) VALUES(?, ?, ?, ?)', [id, password, nickname, email], (error, data) => {
-					if(error)	throw error;
+				connection.query('INSERT INTO user-info (id, pw, nickname, email) VALUES(?, ?, ?, ?)', [id, password, nickname, email], (error, data) => {
+					if(error)	throw error2;
 					res.send('<script type="text/javascript">alert("회원가입이 완료되었습니다."); location.replace("/login");<script>');
 				});
 			} else {
