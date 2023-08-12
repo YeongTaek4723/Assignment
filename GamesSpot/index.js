@@ -48,8 +48,7 @@ app.use(express.static('front'));
 app.post('/membership', (req, res) => {
 	const {id, password, nickname, email} = req.body;
 
-	const sql = 'INSERT INTO user-info (id, pw, nickname, email) VALUES (?, ?, ?, ?)';
-	connection.query(sql, [id, password ,  nickname, email], (err, result) => {
+	connection.query('INSERT INTO user-info (id, pw, nickname, email) VALUES (?, ?, ?, ?)', [id, password , nickname, email], (err, result) => {
 	if (err) {
 		console.error(err);
 		res.status(500).json({ error: 'Failed to register' });
